@@ -1,97 +1,47 @@
 import { formValidate } from './forms/formValidate'
-import { sidebar } from './components/sidebar'
+import { Sidebar } from './components/sidebar'
+import { loadJSON } from './products/productService'
+// import { Notification } from './components/notification'
 
-/* basket */
-const productList = document.querySelector('.products-list') // контейнер для отрисовки товаров
+const currentPage = 1 // начальная страница
 
-init()
-
-// инициализация функций при загрузке страницы
-function init() {
-  // подгрузка данных при загрузке страницы
+/**
+ * Загружает данные при отрисовке страницы страницы.
+ */
+const init = (() => {
   window.addEventListener('DOMContentLoaded', () => {
     loadJSON()
+    formValidate() //  Валидация формы
   })
-}
+})()
 
-async function loadJSON() {
-  try {
-    const response = await fetch('http://localhost:3000/products')
-    const data = await response.json()
+/**
+ * Создает экземпляр сайдбара.
+ * @param {string} sidebarComponent - Селектор компонента сайдбара.
+ * @param {string} toggleButton - Селектор кнопки, по клику на которую открывается сайдбар.
+ * @param {string} [position='left'] - Позиция сайдбара (по умолчанию 'left').
+ */
+const panel = new Sidebar('#sidebar', '#show-sidebar', 'right')
 
-    let html = ''
+// Только для примера
+// const notification = new Notification({
+//   title: 'Добавление товара',
+//   subtitle: 'Товар добавлен на страницу',
+// })
+// const notification1 = new Notification({
+//   title: 'Добавление товара 1',
+//   subtitle: 'Товар добавлен на страницу 1',
+//   variant: 'warning',
+// })
 
-    if (data && Array.isArray(data)) {
-      data.forEach((product) => {
-        html += `
-          <div class="main-card">
-              <div class="card-image">
-                <img src="${product?.imgSrc}" alt="image">
+// const notification2 = new Notification({
+//   title: 'Добавление товара 2',
+//   subtitle: 'Товар добавлен на страницу 2',
+//   variant: 'error',
+// })
 
-                <div class="card-wishlist">
-                  <div class="wishlist-rating">
-
-                    <div class="rating-img">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M16 6.12414H9.89333L8 0L6.10667 6.12414H0L4.93333 9.90345L3.06667 16L8 12.2207L12.9333 16L11.04 9.87586L16 6.12414Z"
-                          fill="#FFCE31" />
-                      </svg>
-                    </div>
-
-                    <span class="rating-amount">${product?.rating}</span>
-                  </div>
-
-                  <svg class="whishlist-heart" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="m16 28c7-4.733 14-10 14-17 0-1.792-.683-3.583-2.05-4.95-1.367-1.366-3.158-2.05-4.95-2.05-1.791 0-3.583.684-4.949 2.05l-2.051 2.051-2.05-2.051c-1.367-1.366-3.158-2.05-4.95-2.05-1.791 0-3.583.684-4.949 2.05-1.367 1.367-2.051 3.158-2.051 4.95 0 7 7 12.267 14 17z">
-                    </path>
-                  </svg>
-                </div>
-              </div>
-
-              <h3 class="card-name">${product?.name}</h3>
-
-              <p class="card-category">${product?.category}</p>
-
-              <p class="card-price">${product?.price}</p>
-
-              <button class="btn btn-primary">Add to cart</button>
-            </div>
-        `
-      })
-    }
-    productList.insertAdjacentHTML('beforeend', html)
-  } catch (error) {
-    console.error('Ошибка загрузки данных:', error)
-  }
-}
-
-// обработка формы
-const form = document.querySelector('form') // форма
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault()
-
-  const targetElement = event.target // целевой элемент (форма)
-
-  const inputLists = targetElement.querySelectorAll('input') // достаём все инпуты
-
-  inputLists.forEach((input) => {
-    userData[input?.name] = input?.value
-  })
-
-  fetch('http://localhost:3000/products', {
-    method: 'POST', // Здесь так же могут быть GET, PUT, DELETE
-    body: JSON.stringify(userData), // Тело запроса в JSON-формате
-    headers: {
-      // Добавляем необходимые заголовки
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data)
-      // {title: "foo", body: "bar", userId: 1, id: 101}
-    })
-})
+// const notification3 = new Notification({
+//   title: 'Добавление товара 4',
+//   subtitle: 'Товар добавлен на страницу 4',
+//   variant: 'success',
+// })
