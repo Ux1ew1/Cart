@@ -1,24 +1,28 @@
 import { validateForm } from './validators'
 import { form } from '../selectors/selectors'
 
+/**
+ * Функция для валидации полей формы.
+ * @returns {void}
+ */
 export const formValidate = () => {
-  // проверяем что форма есть
+  // Проверяем, что форма существует
   if (form) {
-    // получаем все input и select
+    // Получаем все input, select
     const allInputs = form.querySelectorAll('input, select')
 
-    // обработчик изменения каждого поля ввода
+    // Обработчик изменения каждого поля ввода
     allInputs.forEach((input) => {
       input.addEventListener('change', () => {
-        const userDate = {}
+        const userData = {}
 
-        // собираем данные только из текущего поля формы
-        userDate[input.name] = input.value
+        // Собираем данные только из текущего поля формы
+        userData[input.name] = input.value
 
-        // валдация только для текущего поля
-        const errors = validateForm(userDate)
+        // Валидация только для текущего поля
+        const errors = validateForm(userData)
 
-        // обновление сообщения об ошибке только для текущего поля
+        // Обновление сообщения об ошибке только для текущего поля
         const errorElement = document.querySelector(`#${input.name}-error`)
 
         if (errorElement) {
