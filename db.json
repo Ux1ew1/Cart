@@ -33,20 +33,100 @@
       "imgSrc": "/images/help-image-4.jpg"
     },
     {
-      "name": "Тестовый товар",
-      "category": "Тестовая категория",
-      "rating": "100",
-      "price": "300",
-      "imgSrc": "https://s1.1zoom.ru/big7/285/Christmas_Holidays_Spruce_Balls_Snowmen_555646_2560x1706.jpg",
-      "id": "ySvhgzJ"
+      "id": "k6jvJ29rcqd5q-Lp2VsYz",
+      "name": "11",
+      "rating": "11",
+      "price": "11",
+      "imgSrc": "http://localhost:5173/",
+      "category": "Clothing"
     },
     {
-      "id": "6f75",
-      "name": "afaf",
-      "category": "afaf",
-      "rating": "afa",
-      "price": "fafaf",
-      "imgSrc": "http://localhost:5173/"
+      "id": "U_KhPkTk4Un5Yrq9UsagE",
+      "name": "Машина новая ",
+      "rating": "10",
+      "price": "100000",
+      "imgSrc": "https://gas-kvas.com/grafic/uploads/posts/2023-10/1696434667_gas-kvas-com-p-kartinki-mashina-ferrari-1.jpg",
+      "category": "Electronics"
+    },
+    {
+      "id": "Rz5WoWnzPxilWpfLW48XN",
+      "name": "Номер с видом на горы ",
+      "rating": "9",
+      "price": "10000",
+      "imgSrc": "https://pro-dachnikov.com/uploads/posts/2021-12/1638379044_8-pro-dachnikov-com-p-spalnya-s-vidom-na-gori-foto-9.jpg",
+      "category": "Books"
+    },
+    {
+      "id": "NFyFuaI4cXu1ECNIKJTr5",
+      "name": "Квартира-студия ",
+      "rating": "6",
+      "price": "20000",
+      "imgSrc": "https://les-stroi.ru/wp-content/uploads/7/4/f/74f3bee47bfedbe5789078bc70370790.jpeg",
+      "category": "Clothing"
+    },
+    {
+      "id": "YpIpVRWisQExbbHEXicxV",
+      "name": "Виниловая пластинка ",
+      "rating": "6",
+      "price": "1000",
+      "imgSrc": "http://cdn0.youla.io/files/images/780_780/61/ee/61eee2c0a9f1b74f6a1bf15c-1.jpg",
+      "category": "Electronics"
+    },
+    {
+      "id": "GbsuymimqEKoeF3nHTNG-",
+      "name": "Виниловый проигрыватель ",
+      "rating": "9",
+      "price": "100000",
+      "imgSrc": "https://elitehifi.ru/upload/iblock/9cc/9cc4d167b595515a5c8c1b84c1398f86.png",
+      "category": "Electronics"
+    },
+    {
+      "id": "8mLLdIarybW5KI4C7R6UN",
+      "name": "Macbook ",
+      "rating": "10",
+      "price": "100000",
+      "imgSrc": "https://wanderlustpulse.com/wp-content/uploads/2021/11/Apple-M1-Max-Macbook-Pro-16-scaled.jpg",
+      "category": "Electronics"
+    },
+    {
+      "id": "txIXw50zuO0jlaGS8G51y",
+      "name": "Ваза с цветами ",
+      "rating": "4",
+      "price": "600",
+      "imgSrc": "https://gd4.alicdn.com/imgextra/i4/187529409/TB2BZM.tmBjpuFjy1XdXXaooVXa_!!187529409.jpg",
+      "category": "Clothing"
+    },
+    {
+      "id": "sTgwUO04uhfjQsXs8Vfx8",
+      "name": "Искусственное растение ",
+      "rating": "6",
+      "price": "400",
+      "imgSrc": "https://cdn1.ozone.ru/s3/multimedia-2/6851918306.jpg",
+      "category": "Clothing"
+    },
+    {
+      "id": "FaHVN2RfPU0cEzNo_SbhF",
+      "name": "Ткань для автомобилей ",
+      "rating": "9",
+      "price": "6000",
+      "imgSrc": "https://gagaru.club/uploads/posts/2023-05/1685039431_gagaru-club-p-sintetika-tkan-vkontakte-49.jpg",
+      "category": "Clothing"
+    },
+    {
+      "id": "G1iuJe8Ws_50urId8soGo",
+      "name": "Микрофон ",
+      "rating": "4",
+      "price": "2999",
+      "imgSrc": "https://audio-video.ru/media/catalog/item/9000/8764/pro314.jpg",
+      "category": "Electronics"
+    },
+    {
+      "id": "iEI-ZOGdMFbCOGq2a-WdO",
+      "name": "Кондиционер ",
+      "rating": "10",
+      "price": "9999",
+      "imgSrc": "https://splitsystema.ru/images/blog/26/bd121785737151c28380752808649d44.jpeg",
+      "category": "Electronics"
     }
   ]
 }
